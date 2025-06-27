@@ -15,7 +15,7 @@ body {
   padding: 40px 20px;
 }
 
-#photo_2025-05-20_18-36-05 {
+#my-photo {
   width: 220px;
   height: 220px;
   object-fit: contain;
@@ -27,7 +27,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-#photo_2025-05-20_18-36-05:hover {
+#my-photo:hover {
   transform: scale(1.05);
 }
 
