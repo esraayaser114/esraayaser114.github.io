@@ -1,0 +1,110 @@
+/* إعداد عام */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* الحاوية الأساسية */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* الهيدر */
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* صورة البروفايل */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid #007BFF;
+  border-radius: 20px; /* مش مدورة، بس ناعمة */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* اسمك ووصفك */
+h1 {
+  font-size: 36px;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  color: #444;
+}
+
+/* الأقسام */
+section {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 24px;
+  color: #007BFF;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+/* القوائم */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* الروابط */
+a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
