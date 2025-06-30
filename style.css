@@ -6,16 +6,9 @@ body {
   color: #c9d1d9;
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 70px; /* space for navbar */
+  padding-top: 110px; /* زودنا المساحة */
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px 40px;
-}
-
-/* ✅ Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -28,7 +21,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .navbar ul {
   list-style: none;
   display: flex;
