@@ -6,12 +6,13 @@ body {
   color: #c9d1d9;
   line-height: 1.6;
   scroll-behavior: smooth;
+  padding-top: 70px; /* space for navbar */
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 20px 40px;
+  padding: 40px 20px 40px;
 }
 
 /* ✅ Navigation Bar */
@@ -22,6 +23,10 @@ body {
   background-color: #161b22;
   border-bottom: 1px solid #30363d;
   z-index: 1000;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar ul {
@@ -29,14 +34,15 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 14px 0;
-  gap: 30px;
+  padding: 0;
+  gap: 25px;
 }
 
 .navbar a {
   color: #c9d1d9;
   font-weight: 500;
   text-decoration: none;
+  font-size: 15px;
   transition: color 0.3s ease;
 }
 
@@ -167,44 +173,16 @@ a:hover {
 
 /* ✅ Responsive */
 @media (max-width: 600px) {
-  #my-photo {
-    width: 160px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-/* ✅ Additional Fix for Tablets & Phones */
-@media (max-width: 768px) {
   body {
-    padding-top: 120px; /* عشان المحتوى ميكونش تحت النافبار */
+    padding-top: 80px;
   }
 
   .navbar {
-    padding: 10px 0;
+    height: 50px;
   }
 
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .navbar a {
+    font-size: 13px;
   }
 
   #my-photo {
@@ -223,5 +201,12 @@ a:hover {
     width: 100%;
     text-align: center;
   }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 }
+
 
