@@ -6,6 +6,170 @@
   <title>Esraa Yaser | Data Scientist Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* ✅ حل مشكلة تغطية الصورة بالنافبار */
+    body {
+      margin: 0;
+      padding-top: 80px; /* ارتفاع النافبار */
+      background-color: #0d1117;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #c9d1d9;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #161b22;
+      border-bottom: 1px solid #30363d;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 14px 0;
+      gap: 30px;
+    }
+
+    .navbar a {
+      color: #c9d1d9;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #58a6ff;
+      text-decoration: underline;
+    }
+
+    #my-photo {
+      width: 220px;
+      height: auto;
+      max-height: 300px;
+      background-color: #0d1117;
+      border: 4px solid #58a6ff;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 0.3s ease;
+    }
+
+    #my-photo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      text-align: center;
+      font-size: 18px;
+      color: #8b949e;
+    }
+
+    section {
+      background-color: #161b22;
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #58a6ff;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #30363d;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #c9d1d9;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #1f6feb;
+    }
+
+    .contact-list i {
+      margin-right: 8px;
+      color: #58a6ff;
+    }
+
+    .downloads {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #238636;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2ea043;
+    }
+
+    .testimonial {
+      background-color: #0d1117;
+      border-left: 4px solid #58a6ff;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-style: italic;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .testimonial h4 {
+      margin-top: 10px;
+      font-size: 16px;
+      font-style: normal;
+      color: #8b949e;
+    }
+  </style>
 </head>
 <body>
 
@@ -34,7 +198,7 @@
       <p>
         I'm a passionate data scientist with strong expertise in artificial intelligence, machine learning, and data analysis.
         I help businesses grow by building predictive models, uncovering insights, and designing smart solutions from data.
-        I'm currently studying Computer Science, and I specialize in Python, SQL, data visualization ,and machine learning .
+        I'm currently studying Computer Science, and I specialize in Python, SQL, data visualization, and machine learning.
         I aim to solve real-world problems using AI and data-driven thinking.
       </p>
     </section>
@@ -61,22 +225,18 @@
         <li>✅ Delivering tasks during Codsoft Internship that involved data preprocessing, visualization, and modeling</li>
         <li>✅ Publishing open-source data projects on <a href="https://github.com/esraayaser114" target="_blank">GitHub</a></li>
       </ul>
-
       <h3>My Passion for Fulfilling Client Goals</h3>
       <p>
         I believe that data is more than numbers — it’s the story behind decisions, the map to business success, and the key to innovation.
       </p>
-
       <h3>Credibility & Work Ethic</h3>
       <p>
         I am committed to professionalism, transparency, and delivering high-quality results on time.
       </p>
     </section>
 
-    <!-- ✅ Testimonials Section -->
     <section id="testimonials">
       <h2>Testimonials</h2>
-
       <div class="testimonial">
         <p>
           “I had the great pleasure of working with Esraa Yaser on the Data Science project under the Digital Egypt Pioneers initiative.
@@ -87,7 +247,6 @@
         </p>
         <h4>– <a href="https://www.linkedin.com/in/mohamed-omar-eng" target="_blank">Mohamed Omar</a></h4>
       </div>
-
       <div class="testimonial">
         <p>
           “Working with Esraa Yaser in the 'Rowad Masr' team was a great experience.
@@ -100,7 +259,6 @@
       </div>
     </section>
 
-    <!-- ✅ Contact -->
     <section id="contact">
       <h2>Contact Me</h2>
       <ul class="contact-list">
@@ -112,7 +270,6 @@
       </ul>
     </section>
 
-    <!-- ✅ Documents -->
     <section id="documents">
       <h2>My Documents</h2>
       <div class="downloads">
