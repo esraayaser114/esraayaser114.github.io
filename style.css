@@ -111,20 +111,22 @@ a:hover {
   background-color: #2ea043;
 }
 
-/* ✅ Testimonials styling */
+/* Testimonials Styling */
 .testimonial {
   background-color: #0d1117;
-  border: 1px solid #30363d;
-  border-radius: 12px;
+  border-left: 4px solid #58a6ff;
   padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-style: italic;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .testimonial h4 {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 16px;
-  color: #58a6ff;
+  font-style: normal;
+  color: #8b949e;
 }
 
 @media (max-width: 600px) {
