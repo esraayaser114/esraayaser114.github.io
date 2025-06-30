@@ -190,3 +190,38 @@ a:hover {
     gap: 10px;
   }
 }
+
+/* ✅ Additional Fix for Tablets & Phones */
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px; /* عشان المحتوى ميكونش تحت النافبار */
+  }
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #my-photo {
+    width: 160px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
