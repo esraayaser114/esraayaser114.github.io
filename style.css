@@ -1,61 +1,72 @@
+/* === General Body Styles === */
 body {
   margin: 0;
-  padding: 0;
+  padding-top: 80px; /* Leave space for the fixed navbar */
   background-color: #0d1117;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #c9d1d9;
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 110px; /* زودنا المساحة */
 }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* === Navbar Styles === */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #161b22;
+  padding: 0 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(22, 27, 34, 0.85);
   border-bottom: 1px solid #30363d;
   z-index: 1000;
-  height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: top 0.4s ease;
   display: flex;
+  justify-content: center; /* Center menu on desktop */
   align-items: center;
-  justify-content: center;
+  height: 65px;
 }
-.navbar ul {
+
+.navbar .menu {
   list-style: none;
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
-  gap: 25px;
+  gap: 30px;
 }
 
 .navbar a {
   color: #c9d1d9;
   font-weight: 500;
   text-decoration: none;
-  font-size: 15px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
   color: #58a6ff;
-  text-decoration: underline;
 }
 
-/* ✅ Header & Photo */
+/* === Hamburger Menu Functionality === */
+.menu-toggle, .menu-icon {
+  display: none; /* Hide checkbox and hamburger icon by default */
+}
+
+/* === Photo & Header === */
 #my-photo {
   width: 220px;
   height: auto;
-  max-height: 300px;
-  background-color: #0d1117;
   border: 4px solid #58a6ff;
   border-radius: 16px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   transition: transform 0.3s ease;
 }
 
@@ -76,7 +87,7 @@ header p {
   color: #8b949e;
 }
 
-/* ✅ Section Styling */
+/* === Section Styles === */
 section {
   background-color: #161b22;
   border-radius: 16px;
@@ -101,7 +112,6 @@ ul {
 li {
   margin-bottom: 12px;
   font-size: 16px;
-  color: #c9d1d9;
 }
 
 a {
@@ -115,13 +125,12 @@ a:hover {
   color: #1f6feb;
 }
 
-/* ✅ Contact Icons */
 .contact-list i {
   margin-right: 8px;
   color: #58a6ff;
 }
 
-/* ✅ Downloads Button */
+/* === Download Buttons === */
 .downloads {
   display: flex;
   gap: 20px;
@@ -143,9 +152,11 @@ a:hover {
 
 .btn:hover {
   background-color: #2ea043;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* ✅ Testimonials */
+/* === Testimonial Styles === */
 .testimonial {
   background-color: #0d1117;
   border-left: 4px solid #58a6ff;
@@ -153,7 +164,7 @@ a:hover {
   margin-bottom: 20px;
   font-style: italic;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
 }
 
 .testimonial h4 {
@@ -163,42 +174,63 @@ a:hover {
   color: #8b949e;
 }
 
-/* ✅ Responsive */
-@media (max-width: 600px) {
-  body {
-    padding-top: 80px;
-  }
 
+/* === 📱 RESPONSIVE DESIGN (for screens <= 768px) 📱 === */
+@media (max-width: 768px) {
   .navbar {
-    height: 50px;
+    justify-content: flex-end; /* Align icon to the right */
   }
 
-  .navbar a {
-    font-size: 13px;
+  .menu-icon {
+    display: block; /* Show hamburger icon */
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #c9d1d9;
+    padding: 10px;
   }
-
-  #my-photo {
-    width: 160px;
+  
+  .navbar .menu {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    position: absolute;
+    top: 65px; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    
+    background-color: rgba(22, 27, 34, 0.95);
+    border-top: 1px solid #30363d;
+    
+    /* Hide menu by default */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out; /* Smooth transition */
   }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  .btn {
+  
+  .navbar .menu li {
     width: 100%;
     text-align: center;
   }
 
-  .navbar ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  .navbar .menu a {
+    display: block;
+    padding: 15px 0; /* Make links easier to tap */
+  }
+
+  /* --- The Magic: Show menu when checkbox is checked --- */
+  .menu-toggle:checked ~ .menu {
+    max-height: 400px; /* Animate to this height to show the menu */
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  
+  #my-photo {
+    width: 180px;
+  }
+
+  section {
+    padding: 20px 15px;
   }
 }
-
-
