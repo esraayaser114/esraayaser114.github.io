@@ -4,13 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Esraa Yaser | Data Scientist Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* ✅ حل مشكلة تغطية الصورة بالنافبار */
     body {
       margin: 0;
-      padding-top: 80px; /* ارتفاع النافبار */
+      padding-top: 80px;
       background-color: #0d1117;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #c9d1d9;
@@ -24,14 +22,17 @@
       padding: 40px 20px;
     }
 
+    /* ✅ Navbar Styles */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #161b22;
+      backdrop-filter: blur(10px);
+      background-color: rgba(22, 27, 34, 0.8);
       border-bottom: 1px solid #30363d;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: top 0.4s ease;
     }
 
     .navbar ul {
@@ -55,6 +56,7 @@
       text-decoration: underline;
     }
 
+    /* ✅ My Photo */
     #my-photo {
       width: 220px;
       height: auto;
@@ -173,8 +175,8 @@
 </head>
 <body>
 
-  <!-- ✅ Navigation Bar -->
-  <nav class="navbar">
+  <!-- ✅ NAVBAR متحرك -->
+  <nav class="navbar" id="navbar">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -283,5 +285,22 @@
     </section>
 
   </div>
+
+  <!-- ✅ Script لجعل النافبار متحرك -->
+  <script>
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', function () {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px"; // اخفاء النافبار
+      } else {
+        navbar.style.top = "0"; // إظهار النافبار
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+
 </body>
-</html>
+</html>    
